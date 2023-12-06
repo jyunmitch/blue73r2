@@ -1,0 +1,57 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "authenticationType": "oauth2",
+    "baseName": "conferencems",
+    "blueprints": [
+      {
+        "name": "generator-jhipster-entando",
+        "version": "7.3.0"
+      }
+    ],
+    "buildTool": "maven",
+    "cacheProvider": "caffeine",
+    "clientFramework": "no",
+    "creationTimestamp": 1701901050815,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "dtoSuffix": "DTO",
+    "enableGradleEnterprise": false,
+    "enableHibernateCache": true,
+    "enableSwaggerCodegen": false,
+    "enableTranslation": false,
+    "entitySuffix": "",
+    "generateMicroFrontends": "always",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "7.9.3",
+    "jwtSecretKey": "NTllOTBiZjg2MjM2NmM0NWMyZjdjMzNkNjk2MDQwZjI3MWFmNWVhMjM1ZTdmZmY4ZWM1YWIxYjNhMzlkMWZlNzgyNzdmYmQwZjc3MTk1NTI5NTczMjQ3ZTljNjU1NzNiNWUwZjQxNGFiODFiODJkNTczOWViMzFmOGU5NTdiNjc=",
+    "languages": ["en", "fr"],
+    "messageBroker": false,
+    "microfrontend": false,
+    "microserviceDependencies": "entando",
+    "monorepository": true,
+    "nativeLanguage": "en",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-entando",
+        "version": "7.3.0"
+      }
+    ],
+    "packageName": "com.mycompany.myapp",
+    "pages": [],
+    "prodDatabaseType": "postgresql",
+    "reactive": false,
+    "searchEngine": false,
+    "serverPort": "8081",
+    "serverSideOptions": [],
+    "serviceDiscoveryType": false,
+    "skipCheckLengthOfIdentifier": false,
+    "skipClient": true,
+    "skipCommitHook": true,
+    "skipFakeData": false,
+    "skipUserManagement": true,
+    "testFrameworks": [],
+    "websocket": false,
+    "withAdminUi": false
+  }
+}
