@@ -1,0 +1,88 @@
+{
+    "microservices": [
+        {
+            "name": "conference-ms",
+            "stack": "spring-boot",
+            "healthCheckPath": "/management/health",
+            "dbms": "postgresql",
+            "commands": {
+                "pack": "mvn clean package -DskipTests -Pprod"
+            }
+        }
+    ],
+    "microfrontends": [
+        {
+            "name": "conference-table",
+            "customElement": "conference-table",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "conference-table",
+                "it": "conference-table"
+            },
+            "commands": {
+                "run": "npm install && PORT=3000 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "conference-api",
+                    "type": "internal",
+                    "serviceName": "conference-ms"
+                }
+            ]
+        },
+        {
+            "name": "conference-details",
+            "customElement": "conference-details",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "conference-details",
+                "it": "conference-details"
+            },
+            "commands": {
+                "run": "npm install && PORT=3001 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "conference-api",
+                    "type": "internal",
+                    "serviceName": "conference-ms"
+                }
+            ]
+        },
+        {
+            "name": "conference-form",
+            "customElement": "conference-form",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "conference-form",
+                "it": "conference-form"
+            },
+            "commands": {
+                "run": "npm install && PORT=3002 npm start"
+            },
+            "apiClaims": [
+                {
+                    "name": "conference-api",
+                    "type": "internal",
+                    "serviceName": "conference-ms"
+                }
+            ]
+        }
+    ],
+    "svc": [
+        "keycloak"
+    ],
+    "name": "blue73r2",
+    "version": "0.0.1",
+    "description": "blue73r2 description",
+    "type": "bundle"
+}
